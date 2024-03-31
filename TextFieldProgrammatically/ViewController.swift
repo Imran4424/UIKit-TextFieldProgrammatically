@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         statusLabel.backgroundColor = .clear
         
         myTextField = makeTextField(withPlaceholderText: "Write somethig")
+        myTextField.delegate = self
         
         
         view.addSubview(statusLabel)
@@ -42,3 +43,10 @@ class ViewController: UIViewController {
     }
 }
 
+extension ViewController: UITextFieldDelegate {
+    // Implement UITextFieldDelegate method to detect text changes
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        // Update label with text field's text
+        statusLabel.text = textField.text
+    }
+}
