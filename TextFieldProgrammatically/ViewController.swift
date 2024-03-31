@@ -23,6 +23,7 @@ class ViewController: UIViewController {
 
     func setupViews() {
         stackView = makeStackView(withOrientation: .vertical, spacing: margin)
+//        stackView.distribution = .equalCentering
         
         liveTextButton = makeButton(withText: "Live Text Field")
         liveTextButton.addTarget(self, action: #selector(liveTextButtonPressed), for: .touchUpInside)
@@ -42,10 +43,17 @@ class ViewController: UIViewController {
     
     func setupLayouts() {
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: margin),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin),
-            view.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: margin)
+            view.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: margin),
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
+        
+//        NSLayoutConstraint.activate([
+//            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: margin),
+//            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin),
+//            view.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: margin),
+//            view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: stackView.bottomAnchor, constant: margin)
+//        ])
     }
 }
 
