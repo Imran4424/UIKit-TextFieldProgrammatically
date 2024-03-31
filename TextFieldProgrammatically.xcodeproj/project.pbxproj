@@ -14,6 +14,7 @@
 		1DDACF062BB976B200B0C1CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DDACF052BB976B200B0C1CC /* Assets.xcassets */; };
 		1DDACF092BB976B200B0C1CC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1DDACF082BB976B200B0C1CC /* Base */; };
 		1DDACF112BB981E100B0C1CC /* Factories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDACF102BB981E100B0C1CC /* Factories.swift */; };
+		1DDACF132BB9DDD900B0C1CC /* LiveTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDACF122BB9DDD900B0C1CC /* LiveTextViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1DDACF082BB976B200B0C1CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DDACF0A2BB976B200B0C1CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DDACF102BB981E100B0C1CC /* Factories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factories.swift; sourceTree = "<group>"; };
+		1DDACF122BB9DDD900B0C1CC /* LiveTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTextViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				1DDACEFC2BB976B100B0C1CC /* AppDelegate.swift */,
 				1DDACEFE2BB976B100B0C1CC /* SceneDelegate.swift */,
 				1DDACF002BB976B100B0C1CC /* ViewController.swift */,
+				1DDACF122BB9DDD900B0C1CC /* LiveTextViewController.swift */,
 				1DDACF102BB981E100B0C1CC /* Factories.swift */,
 				1DDACF022BB976B100B0C1CC /* Main.storyboard */,
 				1DDACF052BB976B200B0C1CC /* Assets.xcassets */,
@@ -143,6 +146,7 @@
 			files = (
 				1DDACF012BB976B100B0C1CC /* ViewController.swift in Sources */,
 				1DDACEFD2BB976B100B0C1CC /* AppDelegate.swift in Sources */,
+				1DDACF132BB9DDD900B0C1CC /* LiveTextViewController.swift in Sources */,
 				1DDACF112BB981E100B0C1CC /* Factories.swift in Sources */,
 				1DDACEFF2BB976B100B0C1CC /* SceneDelegate.swift in Sources */,
 			);

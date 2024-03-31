@@ -98,13 +98,13 @@ func makeImageView(named: String) -> UIImageView {
 }
 
 
-func makeStackView(withOrientation axis: NSLayoutConstraint.Axis) -> UIStackView {
+func makeStackView(withOrientation axis: NSLayoutConstraint.Axis, spacing: CGFloat = 8.0) -> UIStackView {
     let stackView = UIStackView()
     stackView.translatesAutoresizingMaskIntoConstraints = false
     stackView.axis = axis
     stackView.distribution = .fill
     stackView.alignment = .fill
-    stackView.spacing = 8.0
+    stackView.spacing = spacing
     
     return stackView
 }

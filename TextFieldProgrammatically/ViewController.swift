@@ -8,8 +8,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var statusLabel: UILabel!
-    var myTextField: UITextField!
+    let margin: CGFloat = 20
+    var stackView: UIStackView!
+    var liveTextButton: UIButton!
+    var modalTextFieldButton: UIButton!
+    var hiddenTextFieldButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,34 +22,44 @@ class ViewController: UIViewController {
     }
 
     func setupViews() {
-        statusLabel = makeLabel(withText: "Write Something", size: 25, color: .red)
-        statusLabel.backgroundColor = .clear
+        stackView = makeStackView(withOrientation: .vertical, spacing: margin)
         
-        myTextField = makeTextField(withPlaceholderText: "Write somethig")
-        myTextField.delegate = self
+        liveTextButton = makeButton(withText: "Live Text Field")
+        liveTextButton.addTarget(self, action: #selector(liveTextButtonPressed), for: .touchUpInside)
         
+        modalTextFieldButton = makeButton(withText: "Modal Text Field")
+        modalTextFieldButton.addTarget(self, action: #selector(modalTextFieldButtonPressed), for: .touchUpInside)
         
-        view.addSubview(statusLabel)
-        view.addSubview(myTextField)
+        hiddenTextFieldButton = makeButton(withText: "Hidden Text Field")
+        hiddenTextFieldButton.addTarget(self, action: #selector(hiddenTextFieldButtonPressed), for: .touchUpInside)
+        
+        stackView.addArrangedSubview(liveTextButton)
+        stackView.addArrangedSubview(modalTextFieldButton)
+        stackView.addArrangedSubview(hiddenTextFieldButton)
+        
+        view.addSubview(stackView)
     }
     
     func setupLayouts() {
         NSLayoutConstraint.activate([
-            statusLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            statusLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -40)
-        ])
-        
-        NSLayoutConstraint.activate([
-            myTextField.topAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: 20),
-            myTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: margin),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin),
+            view.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: margin)
         ])
     }
 }
 
-extension ViewController: UITextFieldDelegate {
-    // Implement UITextFieldDelegate method to detect text changes
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-        // Update label with text field's text
-        statusLabel.text = textField.text
+// MARK: - Methods
+extension ViewController {
+    @objc func liveTextButtonPressed() {
+        
+    }
+    
+    @objc func modalTextFieldButtonPressed() {
+        
+    }
+    
+    @objc func hiddenTextFieldButtonPressed() {
+        
     }
 }
