@@ -19,6 +19,8 @@ class LiveTextViewController: UIViewController {
     }
     
     func setupViews() {
+        view.backgroundColor = .white
+        
         statusLabel = makeLabel(withText: "Write Something", size: 25, color: .red)
         statusLabel.backgroundColor = .clear
         

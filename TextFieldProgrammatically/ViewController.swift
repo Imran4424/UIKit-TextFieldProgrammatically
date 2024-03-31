@@ -60,11 +60,17 @@ class ViewController: UIViewController {
 // MARK: - Methods
 extension ViewController {
     @objc func liveTextButtonPressed() {
-        
+        let liveTextViewController = LiveTextViewController()
+        // without fullscreen presentation style it will present as a card
+        // at top of the current view
+        // just comment the following line and run it to see in action
+        liveTextViewController.modalPresentationStyle = .fullScreen
+        present(liveTextViewController, animated: true, completion: nil)
     }
     
     @objc func modalTextFieldButtonPressed() {
-        
+        let liveTextViewController = LiveTextViewController()
+        present(liveTextViewController, animated: true, completion: nil)
     }
     
     @objc func hiddenTextFieldButtonPressed() {
