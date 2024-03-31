@@ -18,11 +18,15 @@ class ViewController: UIViewController {
     }
 
     func setupViews() {
-        
+        myTextField = makeTextField(withPlaceholderText: "Write somethig")
+        view.addSubview(myTextField)
     }
     
     func setupLayouts() {
-        
+        NSLayoutConstraint.activate([
+            myTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            myTextField.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
     }
 }
 
